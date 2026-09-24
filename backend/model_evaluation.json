@@ -1,0 +1,153 @@
+{
+  "target": "survey/measurement-corrected weekly fuel range; not exact litres",
+  "distance_period": "Total distance for the same week, confirmed by dataset owner",
+  "split": "80/20 stratified holdout, random_state=42; model fitted on training split only",
+  "training_rows": 771,
+  "test_rows": 193,
+  "raw_rows": 1050,
+  "conflicting_input_groups_excluded": 0,
+  "conflicting_rows_excluded": 0,
+  "duplicate_rows_removed": 86,
+  "retained_rows": 964,
+  "accuracy": 0.9378238341968912,
+  "macro_f1": 0.8836602552735864,
+  "baseline_accuracy": 0.3471502590673575,
+  "class_labels": [
+    "Less than 10 L",
+    "10-20 L",
+    "21-40 L",
+    "41-60 L",
+    "61-80 L",
+    "81-100 L",
+    "More than 100 L"
+  ],
+  "confusion_matrix": [
+    [
+      66,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      2,
+      54,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      2,
+      44,
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      2,
+      9,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      5,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      0,
+      2,
+      0,
+      2,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ]
+  ],
+  "classification_report": {
+    "Less than 10 L": {
+      "precision": 0.9565217391304348,
+      "recall": 0.9850746268656716,
+      "f1-score": 0.9705882352941176,
+      "support": 67.0
+    },
+    "10-20 L": {
+      "precision": 0.9310344827586207,
+      "recall": 0.9642857142857143,
+      "f1-score": 0.9473684210526315,
+      "support": 56.0
+    },
+    "21-40 L": {
+      "precision": 0.9565217391304348,
+      "recall": 0.9361702127659575,
+      "f1-score": 0.946236559139785,
+      "support": 47.0
+    },
+    "41-60 L": {
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1-score": 0.75,
+      "support": 12.0
+    },
+    "61-80 L": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 5.0
+    },
+    "81-100 L": {
+      "precision": 1.0,
+      "recall": 0.4,
+      "f1-score": 0.5714285714285714,
+      "support": 5.0
+    },
+    "More than 100 L": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 1.0
+    },
+    "accuracy": 0.9378238341968912,
+    "macro avg": {
+      "precision": 0.9420111372884986,
+      "recall": 0.8622186505596205,
+      "f1-score": 0.8836602552735864,
+      "support": 193.0
+    },
+    "weighted avg": {
+      "precision": 0.9387637787323955,
+      "recall": 0.9378238341968912,
+      "f1-score": 0.9347787796910155,
+      "support": 193.0
+    }
+  },
+  "limitations": [
+    "Fuel targets are survey ranges, not exact litres",
+    "Contradictory-label input groups excluded if present",
+    "Respondent/vehicle identifiers unavailable for grouped validation",
+    "No independent road-test validation",
+    "Range boundaries preserve survey labels; not a continuous measurement scale"
+  ]
+}
